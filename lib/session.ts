@@ -4,7 +4,7 @@ import { AdapterUser } from 'next-auth/adapters';
 import GoogleProvider from 'next-auth/providers/google';
 import jsonwebtoken from 'jsonwebtoken';
 import { JWT } from 'next-auth/jwt';
-
+ 
 
 export const authOptions: NextAuthOptions = { 
     providers: [
@@ -29,7 +29,7 @@ export const authOptions: NextAuthOptions = {
         async session({ session }) {
             
         },
-        async signIn((user)) {
+        async signIn(({user} : {user: AdapterUser | User})) {
             
         }
     }
