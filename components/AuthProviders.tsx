@@ -1,7 +1,6 @@
-'use clinet'
+'use client'
 import { getProviders, signIn } from "next-auth/react";
 import React,{ useState, useEffect } from "react";
-import { Key } from "readline";
 
 type Provider = {
   id: string,
